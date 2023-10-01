@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Card</title>
+    <style>
+        body{
+            background-color: rgb(252, 215, 220);
+        }
+        .container {
+            background-color: white;
+            border-radius: 5px;
+            width: 700px;
+            height: 300px;
+            margin: 50px auto;
+            display: flex;
+            line-height: 12px;
+            font-family: sans-serif;
+        }
+        .container1 {
+            display: flex;
+        }
+        .container1 img{
+            margin-left: 50px;
+        }
+        .info-container {
+            margin-left: 30px;
+        }
+        .image{
+            background-size: cover;
+        }
+        .container2{
+            line-height:5px;
+        }
+        .container3 {
+            display: flex;
+            align-items: center;
+            color: rgb(57, 57, 57);
+            line-height: 20px;
+        }
+        .btn {
+            height: 30px;
+            width: 30px;
+            background-color: white;
+            border: 1px solid grey;
+        }
+        .container4{
+            display: flex;
+            margin-left: 40px;
+            height: 30px; 
+        }
+        .para{
+            color: rgb(142, 141, 141);
+            margin-right:10px;
+            font-size: 14px;
+        }
+        .container5{
+            display: flex;  
+        }
+        .btn1{
+            background-color: rgb(251, 0, 113);
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            height: 40px;
+            width: 150px;
+            border:none;
+            box-shadow:  2px 5px 10px rgb(224, 33, 128);
+        }
+        .btn2{
+            margin-left: 40px;
+            border: 1px solid rgb(228, 217, 217);
+            background-color: white;
+            color: rgb(163, 158, 158);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img-container">
+            <img src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcRLZeT8nD5HH7Xx8rzxvBNkc45XJUJEg5NoGz1nOiII-YibVk_6YV4czdRnEBxRvDAx"
+                height="300" width="300" class="image" />
+        </div>
+        <div class="info-container">
+            <div class="container2">
+                <h2 style="color: rgb(234, 2, 130);">DRAGON FRUIT</h2>
+                <p style="color:rgb(82, 81, 81)">OR PITAYA FRUIT</p>
+            </div>
+
+            <div class="container1">
+                <h4>$22.67</h4>
+                <img src="rating.png" height="50px" />
+            </div>
+            <p class="para">
+                The Dragon Fruit has hot pink skin and tastes like a combination of a kiwi and a watermelon, with pulp
+                being white as the name suggests.
+            </p>
+            <div class="container3">
+                <p>QUANTITY:</p>
+                <div class="container4">
+                    <div><button onclick="decrease()" class="btn">-</button></div>
+                    <div style="display: flex; align-items: center;border-top:1px solid grey;border-bottom:1px solid grey;padding:10px"><h3 id="num">0</h3></div>
+                    <div><button onclick="increase()" class="btn">+</button></div>
+                </div>
+            </div>
+            <div class="container5">
+                <button class="btn1">ADD TO CART</button>
+                <button class="btn2">View Details</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function increase() {
+            const b = document.getElementById('num');
+            b.innerText = parseInt(b.innerText) + 1;
+        }
+        function decrease() {
+            const b = document.getElementById('num');
+            b.innerText = parseInt(b.innerText) - 1;
+        }
+    </script>
+</body>
+
+</html>
